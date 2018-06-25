@@ -7,7 +7,7 @@
 <link rel="dns-prefetch" href="//lib.baomitu.com"/>
 <link rel="dns-prefetch" href="//ww4.sinaimg.cn"/>
 <link rel="shortcut icon" href="https://cdn.xedgo.com/images/favicon.ico" />
-<link rel='stylesheet' id='materialist-style-css'  href='/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='materialist-style-css'  href='/wp-content/themes/materialist/style.css' type='text/css' media='all' />
 <title> 
    <?php 
          if (is_home()||is_search()) { bloginfo('name'); } 
