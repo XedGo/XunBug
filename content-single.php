@@ -16,11 +16,6 @@
 			echo '</div>';
 		} 
 	?>
-
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
@@ -35,4 +30,8 @@
 	<footer class="entry-footer">
 		<?php materialist_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	
+	<footer class="entry-footer">
+	<span class="edit-link"><a class="post-edit-link" href="#">Share</a></span>
+	</footer>
 </article><!-- #post-## -->

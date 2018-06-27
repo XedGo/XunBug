@@ -83,6 +83,9 @@ a:active,a:focus,a:hover {
 a img {
 	border: 0
 }
+ff {
+	float:left;
+}
 
 body,button,input,select,textarea {
 	color: #666;
@@ -2220,6 +2223,9 @@ body.admin-bar.scrolling .drawer-content {
 		margin-right: auto;
 		margin-left: auto
 	}
+	.entry-featured-image img {
+    height: 230px;
+}
 
 	.hentry {
 		padding-left: 10pc

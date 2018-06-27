@@ -7,13 +7,18 @@
 <link rel="dns-prefetch" href="//lib.baomitu.com"/>
 <link rel="dns-prefetch" href="//ww4.sinaimg.cn"/>
 <link rel="shortcut icon" href="https://cdn.xedgo.com/images/favicon.ico" />
-<link rel='stylesheet' id='materialist-style-css'  href='/wp-content/themes/materialist/style.css' type='text/css' media='all' />
-<title> 
-   <?php 
-         if (is_home()||is_search()) { bloginfo('name'); } 
-         else{wp_title(''); echo ' - '; bloginfo('name');} 
-  ?> 
- </title>
+<link rel='stylesheet' id='materialist-style-css'  href='/wp-content/themes/materialist/style.css?12' type='text/css' media='all' />
+<?php
+if ( is_home () || is_search()) : 
+//如果是文章单页
+?>
+<title>园子的测试笔记</title>
+<meta name="description" content="园子的测试笔记，记录我的生活与工作，或许这里还藏着许多有趣的东西，一起来发现吧。" />   
+<meta name="keywords" content="xunbug,寻bug,园子的笔记本,xunbug.com" /> 
+<?php else ://其他情况?>
+<title><?php wp_title(''); echo ' - '; bloginfo('name'); ?></title>
+<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 46	,"......"); ?>" />  
+<?php  endif ?>
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
@@ -30,7 +35,7 @@ if ( is_single ()) :
 ?>
 <h1 class="site-title"><a href="<?php the_permalink(); ?>" rel="home"><?php the_title(); ?></a></h1>
 <?php else ://其他情况 ?>
- <h1 class="site-title"><a href="/" rel="home">Yuanzi's test Notebook</a></h1>
+ <h1 class="site-title"><a href="/" rel="home">Yuan Zi's Test Notebook</a></h1>
 	<div class="xunbug"><h2 class="site-description">Xunbug equivalent to <span>寻</span><span>B</span><span>U</span><span>G</span>，A very interesting blog</h2></div>
 <?php  endif ?>
 		</div><!-- .site-branding -->
