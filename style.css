@@ -893,7 +893,14 @@ table {
 th {
 	font-weight: 700
 }
-
+	#goToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 10%;
+}
+a.genericond.genericon.genericon-top {
+    font-size: 3em;
+}
 img.vultr {
     width: 65px;
     margin: 7px;
