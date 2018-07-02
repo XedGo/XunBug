@@ -39,8 +39,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-<a href="https://www.upyun.com/" target="_blank" title="upyun_logo">
-			<img src="https://cdn.xedgo.com/images/upyun_logo.svg" alt="upyun_logo"></a><br>
+<a href="https://www.upyun.com/" target="_blank" title="静态文件托管在又拍云">
+			<img src="https://cdn.xedgo.com/images/upyun_logo.svg" alt="upyun_logo"></a><a href="https://www.vultr.com/?ref=7376448" target="_blank" title="博客运行在VULTR"><img class="vultr" src="https://cdn.xedgo.com/images/vultr_logo.svg" alt="vultr_logo"></a><br>
 Proudly powered by Wordpress.&nbsp; 	鄂ICP备16015204号-4 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

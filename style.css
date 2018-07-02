@@ -894,6 +894,11 @@ th {
 	font-weight: 700
 }
 
+img.vultr {
+    width: 65px;
+    margin: 7px;
+}
+
 @-webkit-keyframes ripple-animation {
 	0% {
 		-webkit-transform: scale(.01);
