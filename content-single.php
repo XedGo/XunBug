@@ -28,10 +28,26 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+		<div class="share">分享到： <a href="#" onclick="shareTo('qq')">QQ</a> &nbsp; <a href="#" onclick="shareTo('sina')">Weibo</a></div>
 		<?php materialist_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 	
-	<footer class="entry-footer">
-	<span class="edit-link"><a class="post-edit-link" href="#">Share</a></span>
-	</footer>
 </article><!-- #post-## -->
+
+<script>
+	function shareTo(stype){
+    var ftit = '';
+    var flink = '';
+    ftit = $('.site-title').text();
+    flink = $('.content-area img').eq(0).attr('src');
+    if(typeof flink == 'undefined'){
+        flink='';
+    }
+    if(stype=='sina'){
+    	window.open('http://service.weibo.com/share/share.php?appkey=&title='+ftit+'&url='+document.location.href+'&pic='+flink+'&searchPic=false&style=simple');
+    }
+    if(stype == 'qq'){
+        window.open('http://connect.qq.com/widget/shareqq/index.html?url='+document.location.href+'?sharesource=qzone&title='+ftit+'&pics='+flink+'&summary='+document.querySelector('meta[name="description"]').getAttribute('content')+'&desc=园子的测试小课堂，快来给我一起发现有趣的东西吧！');
+    }
+}
+</script>

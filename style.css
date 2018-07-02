@@ -927,6 +927,17 @@ th {
 	margin: -13px 0 0 -10px
 }
 
+.share {
+    font-size: 15px;
+    float: right;
+    margin-top: -30px;
+    margin-right: 15px;
+    color: #607d8b;
+}
+.share a{
+	text-decoration: none;
+}
+
 div#sidebar::-webkit-scrollbar-track {
 	border-radius: 2px
 }
@@ -1590,6 +1601,12 @@ body.admin-bar.scrolling .drawer-content {
 		width: 16pc;
 		margin: -3px 0;
 	}
+	.share {
+    font-size: 13px;
+    float: right;
+    margin-top: -22px;
+    margin-right: 15px;
+}
 	.sidebar-header.header-cover {
     margin: -5px 0;
 }

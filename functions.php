@@ -151,6 +151,7 @@ function materialist_excerpt_more(){
 endif;
 add_filter( 'excerpt_more', 'materialist_excerpt_more' );
 
+
 /**
  * Implement the Custom Header feature.
  */

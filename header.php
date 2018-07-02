@@ -17,8 +17,18 @@ if ( is_home () || is_search()) :
 <meta name="keywords" content="xunbug,寻bug,园子的笔记本,xunbug.com" /> 
 <?php else ://其他情况?>
 <title><?php wp_title(''); echo ' - '; bloginfo('name'); ?></title>
-<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 46	,"......"); ?>" />  
+<meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 120	,"......"); ?>" />
+<!-- og -->
+<meta property="og:type" content="acticle"/>
+<meta property="og:title" content="<?php wp_title(''); ?>"/>
+<meta property="og:url" content="<?php the_permalink();?>"/>
+<meta property="og:description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 120	,"......"); ?>"/>
+<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />  
+<meta property="article:published_time" content="<?php date_default_timezone_set('PRC'); echo get_the_date('c'); ?>" />
+<meta property="article:author" content="园子" /> 
+<meta property="article:published_first" content="园子的测试笔记,<?php the_permalink();?>" /> 
 <?php  endif ?>
+<!--og end-->
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
