@@ -7,7 +7,7 @@
 <link rel="dns-prefetch" href="//lib.baomitu.com"/>
 <link rel="dns-prefetch" href="//ww4.sinaimg.cn"/>
 <link rel="shortcut icon" href="https://cdn.xunbug.com/images/favicon.ico" />
-<link rel='stylesheet' id='materialist-style-css'  href='/wp-content/themes/materialist/style.css?12' type='text/css' media='all' />
+<link rel='stylesheet' id='materialist-style-css'  href='//cdn.xunbug.com/css/v1_style.css' type='text/css' media='all' />
 <?php
 if ( is_home () || is_search()) : 
 //如果是文章单页
