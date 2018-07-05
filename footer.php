@@ -40,14 +40,14 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 <a href="https://www.upyun.com/" target="_blank" title="静态文件托管在又拍云">
-			<img src="https://cdn.xedgo.com/images/upyun_logo.svg" alt="upyun_logo"></a><a target="_blank" href="https://www.vultr.com/?ref=7376448" title="博客运行在VULTR"><img class="vultr" src="https://cdn.xedgo.com/images/vultr_logo.svg" alt="vultr_logo"></a><br>
+			<img src="https://cdn.xunbug.com/images/upyun_logo.svg" alt="upyun_logo"></a><a target="_blank" href="https://www.vultr.com/?ref=7376448" title="博客运行在VULTR"><img class="vultr" src="https://cdn.xunbug.com/images/vultr_logo.svg" alt="vultr_logo"></a><br>
 Proudly powered by Wordpress.&nbsp; 	鄂ICP备16015204号-5 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://lib.baomitu.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
-<script type='text/javascript' src='https://cdn.xedgo.com/javascript/materialist.js'></script>
+<script type='text/javascript' src='https://cdn.xunbug.com/javascript/materialist.js'></script>
 <?php wp_footer(); ?>
 <div id="goToTop"><a class="genericond genericon genericon-top" href="javascript:;"></a></div>
     <script>
