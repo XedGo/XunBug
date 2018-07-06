@@ -45,14 +45,21 @@ Proudly powered by Wordpress.&nbsp; 	鄂ICP备16015204号-5
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://lib.baomitu.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
 <script type='text/javascript' src='https://cdn.xunbug.com/javascript/materialist.js'></script>
-<script src="https://lib.baomitu.com/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 <?php wp_footer(); ?>
 <div id="goToTop"><a class="genericond genericon genericon-top" href="javascript:;"></a></div>
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+      $("img.lazy").lazyload({
+  placeholder : "https://cdn.xunbug.com/images/load.svg", //用图片提前占位
+  effect: "fadeIn", // 载入使用何种效果
+  threshold: 100, // 提前开始加载
+  event: 'click',  // 事件触发时才加载
+  failurelimit : 10 // 图片排序混乱时
+  });
+</script>
     <script>
-    $("img").lazyload({effect: "fadeIn"});
     $(function(){
         $('#goToTop a').click(function(){
             $('html , body').animate({scrollTop: 0},'slow');
