@@ -51,7 +51,7 @@ Proudly powered by Wordpress.&nbsp; 	鄂ICP备16015204号-5
 <div id="goToTop"><a class="genericond genericon genericon-top" href="javascript:;"></a></div>
 <script type="text/javascript" charset="utf-8">
   $(function() {
-      $("img.lazy").lazyload({
+      $("img").lazyload({
   placeholder : "https://cdn.xunbug.com/images/load.svg", //用图片提前占位
   effect: "fadeIn", // 载入使用何种效果
   threshold: 100, // 提前开始加载
