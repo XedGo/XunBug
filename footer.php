@@ -48,14 +48,25 @@ Proudly powered by Wordpress.&nbsp; 	鄂ICP备16015204号-5
 <script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://lib.baomitu.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
 <script type='text/javascript' src='https://cdn.xunbug.com/javascript/materialist.js'></script>
+<script src="https://lib.baomitu.com/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 <?php wp_footer(); ?>
 <div id="goToTop"><a class="genericond genericon genericon-top" href="javascript:;"></a></div>
     <script>
+    $("img").lazyload({effect: "fadeIn"});
     $(function(){
         $('#goToTop a').click(function(){
             $('html , body').animate({scrollTop: 0},'slow');
         });
     });
     </script>
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?09a5a1aec112f5fa10de28d37e046444";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </body>
 </html>
