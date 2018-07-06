@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="dns-prefetch" href="//cdn.xedgo.com"/>
+<link rel="dns-prefetch" href="//cdn.xunbug.com"/>
 <link rel="dns-prefetch" href="//lib.baomitu.com"/>
-<link rel="dns-prefetch" href="//ww4.sinaimg.cn"/>
 <link rel="shortcut icon" href="https://cdn.xunbug.com/images/favicon.ico" />
 <link rel='stylesheet' id='materialist-style-css'  href='//cdn.xunbug.com/css/v1_style.css' type='text/css' media='all' />
 <?php
