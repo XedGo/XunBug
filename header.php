@@ -6,7 +6,7 @@
 <link rel="dns-prefetch" href="//cdn.xunbug.com"/>
 <link rel="dns-prefetch" href="//lib.baomitu.com"/>
 <link rel="shortcut icon" href="https://cdn.xunbug.com/images/favicon.ico" />
-<link rel='stylesheet' id='materialist-style-css'  href='//cdn.xunbug.com/css/v1_style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='materialist-style-css'  href='//cdn.xunbug.com/css/v2_style.css' type='text/css' media='all' />
 <script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
 <?php
 if ( is_home () || is_search()) : 

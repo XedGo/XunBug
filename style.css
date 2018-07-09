@@ -1457,6 +1457,10 @@ a.sidebar-brand:hover {
 	opacity: .2
 }
 
+span.tags-links.about {
+    padding: 15px 15px 15px 15pt;
+}
+
 .drawer-content .drawer-navigation a:active,.drawer-content .drawer-navigation a:hover {
 	text-decoration: none
 }
@@ -2311,6 +2315,9 @@ body.admin-bar.scrolling .drawer-content {
 		padding: 15px 60px 15px 15pc
 	}
 
+	span.tags-links.about {
+    padding: 15px 60px 15px 8pc;
+}
 	.error404 .cat-links .label,.error404 .tags-links .label,.page .cat-links .label,.page .tags-links .label,.single .cat-links .label,.single .tags-links .label {
 		left: 110px
 	}
