@@ -6,15 +6,15 @@
 <link rel="dns-prefetch" href="//cdn.xunbug.com"/>
 <link rel="dns-prefetch" href="//lib.baomitu.com"/>
 <link rel="shortcut icon" href="https://cdn.xunbug.com/images/favicon.ico" />
-<link rel='stylesheet' id='materialist-style-css'  href='//cdn.xunbug.com/css/v2_style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='materialist-style-css'  href='//cdn.xunbug.com/css/v3_style.css' type='text/css' media='all' />
 <script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
 <?php
 if ( is_home () || is_search()) : 
 //如果是文章单页
 ?>
 <title>园子的测试笔记</title>
-<meta name="description" content="园子的测试笔记，记录我的生活与工作，或许这里还藏着许多有趣的东西，一起来发现吧。" />   
-<meta name="keywords" content="xunbug,寻bug,园子的笔记本,xunbug.com" /> 
+<meta name="description" content="园子的测试笔记，探索一个测试工程师的无限可能，这里散落着各种创意与想法，你是否愿意同我一起拾取？" />   
+<meta name="keywords" content="测试,寻bug,园子的笔记本,xunbug.com,园子,测试工程师" /> 
 <?php else ://其他情况?>
 <title><?php wp_title(''); echo ' - '; bloginfo('name'); ?></title>
 <meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 120	,"......"); ?>" />
@@ -46,7 +46,7 @@ if ( is_single ()) :
 <h1 class="site-title"><a href="<?php the_permalink(); ?>" rel="home"><?php the_title(); ?></a></h1>
 <?php else ://其他情况 ?>
  <h1 class="site-title"><a href="/" rel="home">Yuan Zi's Test Notebook</a></h1>
-	<div class="xunbug"><h2 class="site-description">Xunbug equivalent to <span>寻</span><span>B</span><span>U</span><span>G</span>，A very interesting blog</h2></div>
+<h2 class="site-description">为此间江湖年少偏爱纵横天下，恩仇趁年华轻剑快马。</h2>
 <?php  endif ?>
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->

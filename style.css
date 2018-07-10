@@ -701,7 +701,7 @@ h1,h2,h3,h4,h5,h6 {
 .comment-body blockquote,.entry-content blockquote {
 	margin: 1em;
 	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	font-weight: 300;
 	color: #a6a6a6;
 	line-height: 1.6
@@ -710,7 +710,7 @@ h1,h2,h3,h4,h5,h6 {
 @media screen and (min-width:960px) {
 	.comment-body blockquote,.entry-content blockquote {
 		font-size: 24px;
-		font-size: 2.4rem
+		font-size: 1.6rem
 	}
 }
 
@@ -974,37 +974,6 @@ div#sidebar::-webkit-scrollbar {
 	display: table
 }
 
-.xunbug span{   
-        position: relative;}  
-
-    .xunbug span:nth-child(1){  
-        -webkit-animation:jump 1s linear 0s infinite alternate;  
-    }  
-
-    .xunbug span:nth-child(2){  
-        -webkit-animation:jump 1s linear 0.2s infinite alternate;  
-    }  
-
-    .xunbug span:nth-child(3){  
-        -webkit-animation:jump 1s linear 0.4s infinite alternate;  
-    }  
-
-    .xunbug span:nth-child(4){  
-        -webkit-animation:jump 1s linear 0.6s infinite alternate;  
-    }  
-
-    @-webkit-keyframes jump  
-    {  
-        0%{  
-            top:0px;   
-        }  
-        50%{  
-            top:-6px;    
-        }  
-        100%{  
-            top:6px;   
-        }  
-    }  
 
 button,input,select,textarea {
 	font-size: 100%;
