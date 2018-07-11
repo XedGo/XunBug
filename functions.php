@@ -5,6 +5,8 @@
  * @package Materialist
  */
 
+add_filter('pre_site_transient_update_themes', create_function('$a', "return null;"));
+remove_action('admin_init', '_maybe_update_themes');
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
