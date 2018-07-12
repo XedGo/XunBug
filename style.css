@@ -664,6 +664,12 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 
+.bl {
+    font-size: 26px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
 .comment-body h3,.entry-content h3 {
 	font-size: 1pc;
 	font-size: 1.6rem;
@@ -1060,9 +1066,10 @@ input[type=email],input[type=password],input[type=search],input[type=text],input
 }
 
 input.search-field {
-	border-bottom: 2px solid #607d8b
+    border-bottom: 2px solid #607d8b;
+    width: 110%;
+    margin-left: -30px;
 }
-
 .textwidget.custom-html-widget {
 	margin: -16px
 }
@@ -1445,9 +1452,18 @@ span.tags-links.about {
 
 .drawer-content .drawer-widgets .widget {
 	padding: 15px 25px 15px 50px;
-	border-bottom: 1px solid #dfdfdf
 }
 
+i.genericond.genericon.genericon-search.se {
+    color: #607d8b;
+    font-size: 26px;
+    position: relative;
+    top: 3rem;
+    right: 2rem;
+}
+form.search-form {
+    margin-top: -4rem;
+}
 .drawer-overlay {
 	content: '';
 	position: fixed;

@@ -23,7 +23,9 @@
 
 			<div class="drawer-navigation">
 				<div class="menu"><ul>
-<li class="page_item page-item-2"><a href="/">首页</a></li>
+<li class="page_item page-item-2"><a href="/"><i class="genericond genericon genericon-home bl"></i> 首页</a></li>
+<li class="page_item page-item-2"><a href="/about"><i class="genericond genericon genericon-user bl"></i> 关于</a></li>
+<li class="page_item page-item-2"><a href="/links"><i class="genericond genericon genericon-link bl"></i> 朋友</a></li>
 </ul></div>
 			</div><!-- .drawer-navigation -->
 			
@@ -50,6 +52,8 @@ Proudly powered by Wordpress.&nbsp; 	鄂ICP备16015204号
 <?php wp_footer(); ?>
 <div id="goToTop"><a class="genericond genericon genericon-top" href="javascript:;"></a></div>
     <script>
+    $("#search").click(function(){ $("#icon_search").hide()})
+    $("#search").blur(function(){ $("#icon_search").show()})
     $(function(){
         $('#goToTop a').click(function(){
             $('html , body').animate({scrollTop: 0},'slow');
