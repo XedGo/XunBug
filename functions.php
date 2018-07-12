@@ -5,6 +5,39 @@
  * @package Materialist
  */
 
+/**
+	评论邮件回复
+**/
+function comment_mail_notify($comment_id) { 
+ $comment = get_comment($comment_id);
+ $parent_id = $comment->comment_parent ? $comment->comment_parent : '';
+ $spam_confirmed = $comment->comment_approved; 
+ if (($parent_id != '') && ($spam_confirmed != 'spam')) { 
+ $wp_email = 'waring@xunbug.com' . preg_replace('#^www.#', '', strtolower($_SERVER['SERVER_NAME']));
+ $to = trim(get_comment($parent_id)->comment_author_email); 
+ $subject = '[' . get_option("blogname") . '] 您的留言有了新回复'; 
+ $message = ' 
+ <div style="width: 60%;margin: 0 auto"> 
+ <div style="font-size: 28px;line-height: 28px;text-align: center;"><p>' . trim(get_comment($parent_id)->comment_author) . ', 您好!</p></div> 
+ <div style="border-bottom: 1px solid #eee;padding-top: 10px;"> 
+ <p style="color: #999;">您曾在《' . get_the_title($comment->comment_post_ID) . '》的留言:</p> 
+ <p style="font-size: 18px;">' . trim(get_comment($parent_id)->comment_content) . '</p> 
+ </div> 
+ <div style="border-bottom: 1px solid #eee;padding-top: 10px;"> 
+ <p style="color: #999;">' . trim($comment->comment_author) . ' 给您的回复:</p> 
+ <p style="font-size: 18px;">' . trim($comment->comment_content) . '</p>
+ <p style="text-align: center;font-size: 12px;padding-bottom: 20px;"><a style="border: 1px solid #3297fb;color: #3297fb;padding: 7px 14px;text-decoration: none;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius:4px;" href="' . esc_attr(get_comment_link($parent_id, array('type' => 'comment'))) . '">点击查看</a></p> 
+ </div> <div style="font-size: 12px;color: #999;text-align: center;"> 
+ <p>此邮件由系统自动发送，请勿回复</p> 
+ <p>© <a href="https://xunbug.com" style="color: #999;text-decoration: none;">' . get_option('blogname') . '</a></p> 
+ </div> 
+ </div>'; 
+ $from = "From: \"" . get_option('blogname') . "\" <$wp_email>"; 
+ $headers = "$from\nContent-Type: text/html; charset=" . get_option('blog_charset') . "\n"; wp_mail( $to, $subject, $message, $headers ); } } 
+add_action('comment_post', 'comment_mail_notify');
+
+
+
 add_filter('pre_site_transient_update_themes', create_function('$a', "return null;"));
 remove_action('admin_init', '_maybe_update_themes');
 /**
