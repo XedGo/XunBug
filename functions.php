@@ -4,7 +4,30 @@
  *
  * @package Materialist
  */
-
+function post_thumbnail_src(){
+    global $post;
+    if( $values = get_post_custom_values("thumb") ) {   //输出自定义域图片地址
+        $values = get_post_custom_values("thumb");
+        $post_thumbnail_src = $values [0];
+    } elseif( has_post_thumbnail() ){    //如果有特色缩略图，则输出缩略图地址
+        $thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'full');
+        $post_thumbnail_src = $thumbnail_src [0];
+    } else {
+        $post_thumbnail_src = '';
+        ob_start();
+        ob_end_clean();
+        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+        if(!empty($matches[1][0])){
+            $post_thumbnail_src = $matches[1][0];   //获取该图片 src
+        }elseif( suxingme('suxingme_post_thumbnail') ){
+            $post_thumbnail_src = suxingme('suxingme_post_thumbnail');
+        }else{  
+            //如果日志中没有图片，则显示默认图片
+            $post_thumbnail_src = get_template_directory_uri().'/img/default_thumb.png';
+        }
+    }
+    return $post_thumbnail_src;
+}
 /**
 	评论邮件回复
 **/

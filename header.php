@@ -20,6 +20,10 @@ if ( is_home () || is_search()) :
 <meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 120	,"......"); ?>" />
 <?php
 global $post;
+function fanly_post_imgs(){
+	$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
+	return $full_image_url[0];
+}
 if (is_single()){
 $keywords = "";
 $tags = wp_get_post_tags($post->ID);
@@ -27,6 +31,15 @@ foreach($tags as $tag){
 $keywords = $keywords.$tag->name.",";
 }
 echo "<meta name='keywords' content='{$keywords}' />";
+echo '<script type="application/ld+json">{
+	"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+	"@id": "'.get_the_permalink().'",
+ 	"appid": "1605564498854581",
+	"title": "'.get_the_title().'",
+	"images": ["'.fanly_post_imgs().'"],
+	"pubDate": "'.get_the_time('Y-m-d\TH:i:s').'"
+}</script>
+';
 } 
 ?> 
 <?php  endif ?>
