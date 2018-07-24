@@ -15,33 +15,18 @@ if ( is_home () || is_search()) :
 <title>园子的测试笔记</title>
 <meta name="description" content="园子的测试笔记，探索一个测试工程师的无限可能，这里散落着各种创意与想法，你是否愿意同我一起拾取？" />   
 <meta name="keywords" content="测试,寻bug,园子的笔记本,xunbug.com,园子,测试工程师" /> 
-<?php else ://其他情况?>
+<?php elseif (is_single()) :?>
+<!-- og -->
 <title><?php wp_title(''); echo ' - '; bloginfo('name'); ?></title>
 <meta name="description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 120	,"......"); ?>" />
-<?php
-global $post;
-function fanly_post_imgs(){
-	$full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
-	return $full_image_url[0];
-}
-if (is_single()){
-$keywords = "";
-$tags = wp_get_post_tags($post->ID);
-foreach($tags as $tag){
-$keywords = $keywords.$tag->name.",";
-}
-echo "<meta name='keywords' content='{$keywords}' />";
-echo '<script type="application/ld+json">{
-	"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-	"@id": "'.get_the_permalink().'",
- 	"appid": "1605564498854581",
-	"title": "'.get_the_title().'",
-	"images": ["'.fanly_post_imgs().'"],
-	"pubDate": "'.get_the_time('Y-m-d\TH:i:s').'"
-}</script>
-';
-} 
-?> 
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="<?php wp_title(''); ?>"/>
+<meta property="og:url" content="<?php the_permalink();?>"/>
+<meta property="og:description" content="<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 120	,"......"); ?>"/>
+<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />  
+<meta property="article:published_time" content="<?php date_default_timezone_set('PRC'); echo get_the_date('c'); ?>" />
+<meta property="article:author" content="园子" /> 
+<meta property="article:published_first" content="园子的测试笔记,<?php the_permalink();?>" /> 
 <?php  endif ?>
 </head>
 <body <?php body_class(); ?>>
